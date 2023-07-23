@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-form{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 370px;
+    box-shadow: 4px 4px 3px 4px lightgray;
+    padding: 10px;
+}
+
+form h2{
+    text-align: center;
+    margin: 15px 0;
+}
+
+form input{
+    width: 100%;
+    margin-bottom: 8px;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+form input:not([type="submit"]){
+    box-shadow: inset 0px -3px 0px 0px lightblue;
+}
+
+form input[type="submit"]{
+    background-color: lightblue;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}

@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* common css */
+.overView, .managePort, .upldPort, .users, .profile{
+  height: 100%;
+  width: calc(100% - 200px);
+  float: right;
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+/* common css */
+
+
+/* loading bar css start */
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #9999;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+
+/* loading bar css end */
+
+/* nav area css start */
+
+.navBars{
+  font-size: 30px;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+}
+
+nav{
+  float: left;
+  position: relative;
+  background-color: lightgreen;
+  width: 200px;
+  padding: 10px;
+  height: calc(100vh - 30px);
+  transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  z-index: 99;
+}
+
+.navRemove{
+  margin-left: -200px;
+  transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+}
+
+nav .shortProfile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 15px;
+}
+
+nav .shortProfile .profilePicture{
+  width: 40px;
+  overflow: hidden;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+nav .shortProfile .profilePicture img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.shortProfile .profileName p{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navLinks{
+  width: 100%;
+  padding-top: 10px;
+}
+
+.navLinks ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navLinks ul li{
+  list-style-type: none;
+}
+
+.navLinks ul li a{
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 10px 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  -ms-border-radius: 5;
+  -o-border-radius: 5;
+}
+
+.navLinks ul li a:hover{
+  background-color: lightseagreen;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+.lgtBtn{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.lgtBtn button{
+  padding: 10px 8px;
+  width: 100%;
+  background-color: greenyellow;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* nav area css end */
+
+/* footer area css start */
+
+footer{
+  width: 100%;
+  background-color: lightblue;
+  padding: 5px 0;
+  height: 30px;
+  display: block;
+}
+
+footer p{
+  text-align: center;
+  font-size: 18px;
+}
+
+/* footer area css end */
+
+/* overView area css start */
+
+
+
+/* overView area css end */
+
+/* profile area css start */
+
+.innerProfile{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userProDetails{
+  width: 350px;
+  height: auto;
+  border: 1px solid lightgray;
+  padding: 15px;
+}
+
+.userProDetails .profilePicture{
+  width: 150px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.userProDetails .profilePicture img{
+  width: 100%;
+}
+
+.userProDetails .profilePicture button{
+  cursor: pointer;
+  background-color: lightblue;
+  border: none;
+  outline: none;
+  padding: 5px 0;
+  font-weight: bold;
+}
+
+.userProDetails .profileDetails{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* profile area css end */
