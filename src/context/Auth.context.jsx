@@ -8,6 +8,7 @@ export const authContext = createContext()
 
 export const AuthProvider = ({children})=>{
 
+    const [detectChange, setDetectChange] = useState(true)
     const [currentUser, setCurrentUser] = useState(null)
     const [loader, setLoader] = useState(false)
     const [userProfile, setUserProfile] = useState({
@@ -33,15 +34,17 @@ export const AuthProvider = ({children})=>{
             setUserProfile({
                 displayName: currentUser.displayName,
                 email: currentUser.email,
-                photoURL: currentUser.photoURL
+                photoURL: currentUser.photoURL,
+                id: currentUser.uid
             })
         }
-    },[currentUser])
+    },[currentUser, detectChange])
 
     const value = {
         currentUser,
         loader,
-        userProfile
+        userProfile,
+        setDetectChange
     }
 
     return(

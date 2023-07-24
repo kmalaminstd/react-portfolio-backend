@@ -44,10 +44,10 @@ function Nav() {
           <nav>
             <div className="shortProfile">
               <div className="profilePicture">
-                <img src="./userimg.jpeg" alt="" />
+                <img style={{borderRadius: '50%',}} src={!currentUser.photoURL ? './userimg.jpeg' : currentUser.photoURL} alt="" />
               </div>
               <div className="profileName">
-                <p>K.M. AL-AMIN</p>
+                <p style={{textTransform: 'uppercase'}}>{!currentUser.displayName ? "Demo Name" :currentUser.displayName}</p>
               </div>
             </div>
             <div className="navLinks">

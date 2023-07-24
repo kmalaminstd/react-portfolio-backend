@@ -7,13 +7,19 @@
 
 
 /* common css */
-.overView, .managePort, .upldPort, .users, .profile{
+.overView, .managePort, .upldPort, .users, .profile, .notFnd , .imgChange{
   height: 100%;
   width: calc(100% - 200px);
   float: right;
   position: absolute;
   top: 0;
   left: 200px;
+}
+
+.notFnd{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* common css */
 
@@ -249,3 +255,17 @@ footer p{
 }
 
 /* profile area css end */
+
+/* image change area css start */
+
+.imgChange{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgChange .mainField h2{
+  text-align: center;
+}
+
+/* image change area css end */

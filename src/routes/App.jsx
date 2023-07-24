@@ -14,6 +14,7 @@ import UploadPortfolio from '../pages/UploadPortfolio'
 import ManagePortfolio from "../pages/ManagePortfolio"
 import Profile from "../pages/Profile"
 import ImageChange from "../pages/ImageChange"
+import NotFound from '../pages/NotFound'
 
 
 
@@ -92,6 +93,20 @@ function App() {
                         <Private>
                             <ImageChange />
                         </Private>
+                    )
+                },
+                {
+                    path: `update-profile/:type/:id`,
+                    element: (
+                        <Private>
+                            <ImageChange />
+                        </Private>
+                    )
+                },
+                {
+                    path: '*',
+                    element: (
+                        <NotFound />
                     )
                 }
 
