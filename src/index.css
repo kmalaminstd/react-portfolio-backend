@@ -109,8 +109,10 @@ nav .shortProfile {
 }
 
 nav .shortProfile .profilePicture{
+  height: 40px;
   width: 40px;
   overflow: hidden;
+  border: 2px solid #fff;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -120,7 +122,7 @@ nav .shortProfile .profilePicture{
 
 nav .shortProfile .profilePicture img{
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .shortProfile .profileName p{
@@ -269,3 +271,100 @@ footer p{
 }
 
 /* image change area css end */
+
+/* upload portfolio area css start */
+
+.upldPort{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upldPort .inner-div h2{
+  text-align: center;
+  margin: 25px 0;
+}
+
+.upldPort .inner-div form select{
+  width: 100%;
+  outline: none;
+  border: 2px solid lightblue;
+  margin: 10px 0;
+  padding: 8px 15px;
+  font-size: 18px;
+}
+
+/* upload portfolio area css end */
+
+/* managePort area css start */
+
+.managePort .innerDiv{
+  height: 70%;
+  overflow-y: scroll;
+  width: 90%;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+.managePort .innerDiv .singlePortFolio{
+  border-bottom: 2px dotted lawngreen;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.managePort .innerDiv .singlePortFolio:hover{
+  background-color: lightblue;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  box-shadow: 0px 1px 5px 2px #555;
+}
+
+.managePort .innerDiv .singlePortFolio .image{
+  width: 100px;
+  margin-right: 18px;
+}
+
+.managePort .innerDiv .singlePortFolio .image img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.managePort .innerDiv .singlePortFolio .portTitle{
+  padding-right: 20px;
+}
+
+.managePort .innerDiv .singlePortFolio .portTitle h4{
+  font-size: 20px;
+}
+
+.managePort .innerDiv .singlePortFolio .actions{
+  display: flex;
+  gap: 15px;
+}
+
+.managePort .innerDiv .singlePortFolio .actions button{
+  cursor: pointer;
+  outline: none;
+  font-size: 17px;
+  padding: 8px 15px;
+  border: 2px solid lightgreen;
+  background-color: lightgreen;
+  border-radius: 5px;
+  -webkit-border-radius: 5p;
+  -moz-border-radius: 5p;
+  -ms-border-radius: 5p;
+  -o-border-radius: 5p;
+  
+}
+
+.managePort .innerDiv .singlePortFolio .actions button:hover{
+  border: 2px solid teal;
+}
+
+
+/* managePort area css end */

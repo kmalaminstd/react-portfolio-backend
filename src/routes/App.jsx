@@ -2,7 +2,7 @@ import { BrowserRouter, Outlet, Route, RouterProvider, Routes, createBrowserRout
 import Login from '../pages/Login'
 import { ToastContainer } from "react-toastify"
 import { useContext } from "react"
-import { authContext } from "../context/auth.context"
+import { authContext } from "../context/Auth.context"
 import Loading from "../Components/Loading"
 import Overview from "../pages/Overview"
 import Public from "./Public"

@@ -64,6 +64,7 @@ function ImageChange() {
       displayName: info.displayName
     }).then(()=>{
       toast.success("Update successfull")
+      navigate('/user-profile')
     }).catch((err)=>{
       console.log(err.message);
       console.log(err.code);

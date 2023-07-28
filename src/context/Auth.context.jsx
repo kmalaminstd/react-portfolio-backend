@@ -3,6 +3,7 @@ import { useState } from "react";
 import { createContext } from "react";
 import { auth } from "../config/firebase.config";
 import { useEffect } from "react";
+import { collection, setDoc } from "firebase/firestore";
 
 export const authContext = createContext()
 
@@ -40,11 +41,15 @@ export const AuthProvider = ({children})=>{
         }
     },[currentUser, detectChange])
 
+    const addPort = (e)=>{
+
+    }
+
     const value = {
         currentUser,
         loader,
         userProfile,
-        setDetectChange
+        setDetectChange,
     }
 
     return(
