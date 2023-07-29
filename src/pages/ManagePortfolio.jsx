@@ -1,8 +1,24 @@
 import React, { useContext } from 'react'
 import { PortfolioContext } from '../context/Portfolio.context'
+import { collection, deleteDoc, doc } from 'firebase/firestore'
+import { db } from '../config/firebase.config'
+import { toast } from 'react-toastify'
 
 function ManagePortfolio() {
-  const {allPortfolio} = useContext(PortfolioContext)
+  const {allPortfolio, setDetectClick} = useContext(PortfolioContext)
+  console.log(allPortfolio);
+  const handleDelete = async (id)=>{
+    const colRef = doc(collection(db, 'PortfolioInfo'), id)
+    console.log(id);
+    try{
+      await deleteDoc(colRef)
+      toast.success("Delete Successfull")
+      setDetectClick(true)
+    }catch(err){
+      console.log(err.message);
+      console.log(err.code);
+    }
+  }
   return (
     <>
       <div className="managePort">
@@ -23,7 +39,7 @@ function ManagePortfolio() {
                 </div>
                 <div className="actions">
                   <button>Edit</button>
-                  <button>Delete</button>
+                  <button onClick={()=>handleDelete(elm.id)}>Delete</button>
                 </div>
               </div>
             )

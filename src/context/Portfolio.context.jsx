@@ -1,4 +1,4 @@
-import { addDoc, collection, getDoc, getDocs, onSnapshot, setDoc } from "firebase/firestore";
+import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { createContext, useContext, useEffect, useState } from "react";
 import { db, storage } from "../config/firebase.config";
 import { v4 as uidGen } from "uuid"
@@ -13,6 +13,7 @@ export const PortfolioContext = createContext()
 
 export const PortfolioContextProvider = ({children})=>{
     const {currentUser} = useContext(authContext)
+    const [detectClick, setDetectClick] = useState(false)
     
     const [allPortfolio, setAllPortfolio] = useState(null)
     
@@ -50,21 +51,24 @@ export const PortfolioContextProvider = ({children})=>{
    useEffect(()=>{
     const unSubscribe =  onSnapshot(collection(db, 'PortfolioInfo'), snapshots =>{
         const portfolios = snapshots.docs.map(elm => {
+            // console.log(elm.id);
             return{
-                ...elm.data()
+                ...elm.data(),
+                id: elm.id
             }
         })
         setAllPortfolio(portfolios)
-        console.log(portfolios);
+        // console.log(portfolios);
     })
     return ()=>{
         unSubscribe()
     }
-   },[currentUser])
+   },[currentUser, detectClick])
 
     const value = {
         uploadPort,
-        allPortfolio
+        allPortfolio,
+        setDetectClick
     }
 
     return(
